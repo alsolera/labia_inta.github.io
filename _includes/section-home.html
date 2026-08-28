@@ -18,7 +18,9 @@
     {% if site.data.images.hero %}
       <img class="hero-figure" src="{{ site.data.images.hero | relative_url }}" alt="">
     {% else %}
-      <div class="hero-figure placeholder dark"><span>{{ t.home.figure_caption }} →</span></div>
+      <div class="hero-mark">
+        <img src="{{ '/images/logo-light.svg' | relative_url }}" alt="" width="118" height="44">
+      </div>
     {% endif %}
   </div>
 </section>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 118 44" width="118" height="44" role="img" aria-labelledby="aeroml-logo-light-title">
+  <title id="aeroml-logo-light-title">AeroML — airfoil with streamlines resolving into a neural network</title>
+  <defs>
+    <linearGradient id="aeroml-flow-light" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="118" y2="0">
+      <stop offset="0" stop-color="#ecebf4"/>
+      <stop offset="0.42" stop-color="#ecebf4"/>
+      <stop offset="0.95" stop-color="#b3aef0"/>
+    </linearGradient>
+  </defs>
+
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- streamlines: one smooth curve each, into the three input nodes -->
+    <path d="M2 9 C22 2.6, 44 3.2, 62.6 7.6"
+          stroke="url(#aeroml-flow-light)" stroke-width="1.9"/>
+    <path d="M3 15 C22 9.2, 44 12.4, 62.6 19.4"
+          stroke="url(#aeroml-flow-light)" stroke-width="1.9"/>
+    <!-- third streamline, detached: starts clear of the trailing edge -->
+    <path d="M56.6 33.2 C58.8 33.1, 60.6 32.6, 62.8 31.9"
+          stroke="url(#aeroml-flow-light)" stroke-width="1.7"/>
+
+    <!-- airfoil: round leading edge left, sharp trailing edge right -->
+    <path d="M51 32.9 C41 26.9, 30 20.8, 20.8 21.5 C13.4 22.1, 7.3 25.8, 8.5 29.4
+             C9.5 32.8, 18.5 34.4, 30 34.4 C40 34.4, 47 33.5, 51 32.9 Z"
+          stroke="#ecebf4" stroke-width="3"/>
+
+    <!-- generic feedforward network, 3 - 2 - 2, fully connected -->
+    <g stroke="#b3aef0" stroke-width="1.2">
+      <path d="M66 8 L87 14"/>
+      <path d="M66 8 L87 26"/>
+      <path d="M66 20 L87 14"/>
+      <path d="M66 20 L87 26"/>
+      <path d="M66 32 L87 14"/>
+      <path d="M66 32 L87 26"/>
+      <path d="M87 14 L108 14"/>
+      <path d="M87 14 L108 26"/>
+      <path d="M87 26 L108 14"/>
+      <path d="M87 26 L108 26"/>
+    </g>
+  </g>
+
+  <g fill="#171b2b" stroke="#b3aef0" stroke-width="1.7">
+    <circle cx="66" cy="8" r="3.3"/>
+    <circle cx="66" cy="20" r="3.3"/>
+    <circle cx="66" cy="32" r="3.3"/>
+    <circle cx="87" cy="14" r="3.3"/>
+    <circle cx="87" cy="26" r="3.3"/>
+    <circle cx="108" cy="14" r="3.3"/>
+    <circle cx="108" cy="26" r="3.3"/>
+  </g>
+</svg>

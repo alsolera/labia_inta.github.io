@@ -110,6 +110,9 @@ a:hover { color: var(--violet-dk); text-decoration: underline; }
 .btn-ghost { background: none; border-color: #3d4260; color: #dcdde8; }
 .btn-ghost:hover { border-color: #7d76c9; color: #fff; }
 .hero-figure { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+/* full logo mark, shown large in the hero until a hero image is supplied */
+.hero-mark { display: flex; align-items: center; justify-content: center; padding: 10px 0; }
+.hero-mark img { width: 100%; max-width: 420px; height: auto; }
 
 /* ── placeholders (replace with real imagery) ───────────────── */
 .placeholder {
