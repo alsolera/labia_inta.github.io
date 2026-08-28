@@ -9,7 +9,7 @@ baseurl: "/labia_inta.github.io"
 # Profile Settings (Sidebar)
 author:
   name: "Dr. Carlos Sanmiguel Vila"
-  avatar: "/images/carlos_sanmiguel.jpg" # Place image in /images/
+  avatar: "carlos_sanmiguel.jpg" # Place image in /images/
   bio: "Principal Investigator & Tenured Scientist (INTA / UC3M)"
   location: "Campus La Marañosa, Madrid, Spain"
   employer: "INTA & Universidad Carlos III de Madrid"
