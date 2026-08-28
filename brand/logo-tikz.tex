@@ -1,0 +1,57 @@
+% AeroML logo — TikZ version, for LaTeX papers, posters and slides.
+% The website uses images/logo.svg; this file is the print equivalent.
+%
+% Usage:
+%   \usepackage{tikz}
+%   \input{brand/logo-tikz.tex}
+%   \aeromllogo          % default size, about 27 mm wide
+%   \aeromllogo[2]       % double size
+%
+% Geometry is copied from images/logo.svg. The picture uses yscale=-1 so the
+% coordinates match the SVG viewBox directly (y grows downward); keep that in
+% mind before editing a control point.
+%
+% The SVG fades the streamlines from navy to violet along x. A stroke gradient
+% is not worth the trouble in TikZ, so here they are solid navy. Everything
+% else is identical.
+
+\definecolor{aeromlnavy}{HTML}{171B2B}
+\definecolor{aeromlviolet}{HTML}{4B3F9E}
+\definecolor{aeromlpaper}{HTML}{F9F8F6}
+
+\newcommand{\aeromllogo}[1][1]{%
+\begin{tikzpicture}[
+    x=#1 pt, y=#1 pt, yscale=-1,
+    line cap=round, line join=round,
+    node mark/.style={circle, draw=aeromlviolet, fill=aeromlpaper,
+                      line width=#1*0.7pt, inner sep=0pt, minimum size=#1*4.8pt},
+  ]
+
+  % streamlines over the wing, resolving into the two input nodes
+  \draw[aeromlnavy, line width=#1*0.67pt]
+    (2,8.5) .. controls (20,2) and (44,1.5) .. (57,5.5)
+            .. controls (61.5,6.9) and (63.2,8.8) .. (64.9,10.3);
+  \draw[aeromlnavy, line width=#1*0.67pt]
+    (3,15) .. controls (20,9) and (44,9.5) .. (56,15.5)
+           .. controls (60.5,18) and (61.4,24.6) .. (65,27.9);
+
+  % airfoil: round leading edge left, sharp trailing edge right
+  \draw[aeromlnavy, line width=#1*1.06pt]
+    (57,33.5) .. controls (45,27) and (32,20) .. (22.5,20.8)
+              .. controls (14.5,21.5) and (7.8,25.6) .. (9,29.5)
+              .. controls (10.1,33.1) and (20,34.8) .. (32.5,34.8)
+              .. controls (44,34.8) and (52.2,34) .. (57,33.5) -- cycle;
+
+  % network: two inputs, one latent node, two outputs
+  \draw[aeromlviolet, line width=#1*0.57pt]
+    (68,11) -- (85,20) -- (99,11);
+  \draw[aeromlviolet, line width=#1*0.57pt]
+    (68,29) -- (85,20) -- (99,29);
+
+  \node[node mark] at (68,11) {};
+  \node[node mark] at (68,29) {};
+  \node[node mark] at (85,20) {};
+  \node[node mark] at (99,11) {};
+  \node[node mark] at (99,29) {};
+\end{tikzpicture}%
+}

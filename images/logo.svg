@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 44" width="108" height="44" role="img" aria-labelledby="aeroml-logo-title">
+  <title id="aeroml-logo-title">AeroML — airfoil with streamlines resolving into a network graph</title>
+  <defs>
+    <linearGradient id="aeroml-flow" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="108" y2="0">
+      <stop offset="0" stop-color="#171b2b"/>
+      <stop offset="0.45" stop-color="#171b2b"/>
+      <stop offset="1" stop-color="#4b3f9e"/>
+    </linearGradient>
+  </defs>
+
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- streamlines pass over the wing and resolve into the two input nodes -->
+    <path d="M2 8.5 C20 2, 44 1.5, 57 5.5 C61.5 6.9, 63.2 8.8, 64.9 10.3"
+          stroke="url(#aeroml-flow)" stroke-width="1.9"/>
+    <path d="M3 15 C20 9, 44 9.5, 56 15.5 C60.5 18, 61.4 24.6, 65 27.9"
+          stroke="url(#aeroml-flow)" stroke-width="1.9"/>
+
+    <!-- airfoil: round leading edge left, sharp trailing edge right -->
+    <path d="M57 33.5 C45 27, 32 20, 22.5 20.8 C14.5 21.5, 7.8 25.6, 9 29.5
+             C10.1 33.1, 20 34.8, 32.5 34.8 C44 34.8, 52.2 34, 57 33.5 Z"
+          stroke="#171b2b" stroke-width="3"/>
+
+    <!-- network: two inputs, one latent node, two outputs -->
+    <g stroke="#4b3f9e" stroke-width="1.6">
+      <path d="M68 11 L85 20"/>
+      <path d="M68 29 L85 20"/>
+      <path d="M85 20 L99 11"/>
+      <path d="M85 20 L99 29"/>
+    </g>
+  </g>
+
+  <g fill="#f9f8f6" stroke="#4b3f9e" stroke-width="2">
+    <circle cx="68" cy="11" r="3.4"/>
+    <circle cx="68" cy="29" r="3.4"/>
+    <circle cx="85" cy="20" r="3.4"/>
+    <circle cx="99" cy="11" r="3.4"/>
+    <circle cx="99" cy="29" r="3.4"/>
+  </g>
+</svg>

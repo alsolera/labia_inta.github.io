@@ -18,6 +18,7 @@ exclude:
   - Gemfile.lock
   - vendor
   - tools
+  - brand
   - README.md
 
 defaults:

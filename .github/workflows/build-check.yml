@@ -74,6 +74,15 @@ jobs:
               echo "ok   $1: no '$2'"
             fi
           }
+          # The logo must be referenced and actually shipped.
+          check _site/index.html "logo.svg"
+          if [ -f _site/images/logo.svg ]; then
+            echo "ok   _site/images/logo.svg exists"
+          else
+            echo "FAIL _site/images/logo.svg missing"
+            fail=1
+          fi
+
           absent _site/index.html "Carlos III"
           absent _site/contact/index.html "Carlos III"
           absent _site/es/index.html "Carlos III"

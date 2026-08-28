@@ -6,8 +6,11 @@
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="brand" href="{{ home_url | relative_url }}">
-      <span class="brand-name">AeroML</span>
-      <span class="brand-sub">{{ t.tagline }}</span>
+      <img class="brand-mark" src="{{ '/images/logo.svg' | relative_url }}" alt="" width="108" height="44">
+      <span class="brand-text">
+        <span class="brand-name">AeroML</span>
+        <span class="brand-sub">{{ t.tagline }}</span>
+      </span>
     </a>
     <nav class="site-nav" aria-label="{{ t.nav.home }}">
       {% assign pages_in_lang = site.pages | where: "lang", base | where_exp: "p", "p.nav_order" | sort: "nav_order" %}
