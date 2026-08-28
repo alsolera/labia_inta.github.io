@@ -1,0 +1,17 @@
+{% assign t = site.data[page.lang | default: site.lang] %}
+{% if page.lang == 'es' %}{% assign es = true %}{% endif %}
+{% include page-head.html eyebrow=t.software.eyebrow title=t.software.title %}
+{% if site.data.software and site.data.software.size > 0 %}
+<div class="grid-3 tiles">
+  {% for s in site.data.software %}
+  <article class="tile">
+    <p class="kind">{{ s.kind }}</p>
+    <h3>{{ s.name }}</h3>
+    <p>{% if es and s.body_es %}{{ s.body_es }}{% else %}{{ s.body }}{% endif %}</p>
+    {% if s.url %}<a class="mono-link" href="{{ s.url }}">{{ s.link_label | default: s.url }}</a>{% endif %}
+  </article>
+  {% endfor %}
+</div>
+{% else %}
+<p class="empty">{{ t.software.note }}</p>
+{% endif %}

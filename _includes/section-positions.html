@@ -1,0 +1,17 @@
+{% assign t = site.data[page.lang | default: site.lang] %}
+{% if page.lang == 'es' %}{% assign es = true %}{% endif %}
+{% assign pi = site.data.team.pi %}
+{% include page-head.html eyebrow=t.positions.eyebrow title=t.positions.title %}
+<p class="lede">{{ t.positions.lede }}</p>
+{% if site.data.positions and site.data.positions.size > 0 %}
+<div class="grid-2 tiles">
+  {% for v in site.data.positions %}
+  <article class="tile">
+    <p class="kind accent">{% if es and v.status_es %}{{ v.status_es }}{% else %}{{ v.status }}{% endif %}</p>
+    <h3>{% if es and v.title_es %}{{ v.title_es }}{% else %}{{ v.title }}{% endif %}</h3>
+    <p>{% if es and v.body_es %}{{ v.body_es }}{% else %}{{ v.body }}{% endif %}</p>
+  </article>
+  {% endfor %}
+</div>
+{% endif %}
+<p class="contact-line"><a href="mailto:{{ pi.email }}">{{ pi.email }}</a></p>

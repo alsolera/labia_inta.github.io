@@ -1,0 +1,55 @@
+{% assign t = site.data[page.lang | default: site.lang] %}
+{% if page.lang == 'es' %}{% assign es = true %}{% endif %}
+{% assign pi = site.data.team.pi %}
+{% include page-head.html eyebrow=t.team.eyebrow title=t.team.title %}
+
+<section class="pi">
+  {% if pi.photo %}
+    <img class="pi-photo" src="{{ pi.photo | relative_url }}" alt="{{ pi.name }}">
+  {% else %}
+    <div class="pi-photo placeholder"></div>
+  {% endif %}
+  <div>
+    <p class="eyebrow accent">{{ t.team.pi_label }}</p>
+    <h2 class="pi-name">{{ pi.name }}</h2>
+    <p class="pi-role">{% if es and pi.role_es %}{{ pi.role_es }}{% else %}{{ pi.role }}{% endif %}</p>
+    <p class="pi-interests">{{ t.team.interests_label }}: {% if es and pi.interests_es %}{{ pi.interests_es }}{% else %}{{ pi.interests }}{% endif %}</p>
+    <div class="links">
+      {% if pi.scholar %}<a href="{{ pi.scholar }}">Google Scholar</a>{% endif %}
+      {% if pi.orcid %}<a href="{{ pi.orcid }}">ORCID</a>{% endif %}
+      {% if pi.email %}<a href="mailto:{{ pi.email }}">{{ pi.email }}</a>{% endif %}
+    </div>
+  </div>
+</section>
+
+<p class="eyebrow mb">{{ t.team.phd_label }}</p>
+<div class="grid-2 tiles mb-xl">
+  {% for m in site.data.team.members %}
+  <article class="member">
+    {% if m.photo %}
+      <img class="member-photo" src="{{ m.photo | relative_url }}" alt="{{ m.name }}">
+    {% else %}
+      <div class="member-photo placeholder"></div>
+    {% endif %}
+    <div>
+      <h3>{{ m.name }}</h3>
+      <p class="member-role">{% if es and m.role_es %}{{ m.role_es }}{% else %}{{ m.role }}{% endif %}</p>
+      <p class="member-interests">{% if es and m.interests_es %}{{ m.interests_es }}{% else %}{{ m.interests }}{% endif %}</p>
+      <div class="links sm">
+        {% if m.scholar %}<a href="{{ m.scholar }}">Scholar</a>{% endif %}
+        {% if m.orcid %}<a href="{{ m.orcid }}">ORCID</a>{% endif %}
+      </div>
+    </div>
+  </article>
+  {% endfor %}
+</div>
+
+<p class="eyebrow mb">{{ t.team.collab_label }}</p>
+<div class="collabs">
+  {% for c in site.data.team.collaborators %}
+  <div class="collab">
+    <span class="collab-name">{{ c.name }}</span>
+    <span>{% if es and c.affiliation_es %}{{ c.affiliation_es }}{% else %}{{ c.affiliation }}{% endif %}</span>
+  </div>
+  {% endfor %}
+</div>

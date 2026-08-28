@@ -1,0 +1,28 @@
+- n: "01"
+  title: "β-VAEs & Transformers for Fluid Dynamics ROMs"
+  title_es: "β-VAEs y transformers para ROMs en dinámica de fluidos"
+  body: "We design non-linear reduced-order models that outperform classical modal decompositions (such as POD/DMD). By combining disentangled representations from β-Variational Autoencoders with autoregressive Transformers, we capture both high-energy large scales and dissipative non-linear dynamics with minimal degrees of freedom."
+  body_es: "Diseñamos modelos de orden reducido no lineales que superan a las descomposiciones modales clásicas (POD/DMD). Combinando representaciones desenredadas de autocodificadores variacionales β con transformers autorregresivos, capturamos tanto las grandes escalas energéticas como la dinámica no lineal disipativa con un número mínimo de grados de libertad."
+  figure_caption: "latent-space figure"
+  # image: /images/research/rom.jpg
+
+- n: "02"
+  title: "Active Flow Control & Wake Stabilization"
+  title_es: "Control activo de flujo y estabilización de estelas"
+  body: "Targeting fuel-efficiency gains and drag mitigation in bluff bodies and ground-transportation aerodynamics, our group implements active flow control strategies combining pulsed micro-jets with Model Predictive Control (MPC) and genetic-algorithm-based optimization."
+  body_es: "Con el objetivo de mejorar la eficiencia energética y reducir la resistencia aerodinámica en cuerpos romos y en el transporte terrestre, el grupo implementa estrategias de control activo de flujo que combinan micro-chorros pulsados con control predictivo por modelo (MPC) y optimización mediante algoritmos genéticos."
+  figure_caption: "wake / jet actuation"
+
+- n: "03"
+  title: "Sparse-Sensor Flow Reconstruction & Super-Resolution"
+  title_es: "Reconstrucción y superresolución con sensores dispersos"
+  body: "Developing generative neural networks and data-driven models capable of reconstructing full-resolution flow fields from sparse, non-intrusive measurements — including randomly-seeded PIV/PTV data and wall-mounted heat-transfer sensors — without requiring full-field high-resolution data for training."
+  body_es: "Desarrollamos redes neuronales generativas y modelos basados en datos capaces de reconstruir campos de flujo a resolución completa a partir de medidas dispersas y no intrusivas — incluyendo datos PIV/PTV de siembra aleatoria y sensores de transferencia de calor en pared — sin necesidad de datos de alta resolución para el entrenamiento."
+  figure_caption: "super-resolution pair"
+
+- n: "04"
+  title: "Experimental Aerodynamics & Wind Tunnel Testing"
+  title_es: "Aerodinámica experimental y ensayos en túnel de viento"
+  body: "Utilizing INTA's wind tunnel facilities and UC3M aerodynamic laboratories to conduct high-fidelity PIV, PTV, infrared thermography, and hot-wire measurements on non-equilibrium boundary layers, adverse pressure gradient flows, impinging jets, and full-scale ground transportation models."
+  body_es: "Utilizamos las instalaciones de túnel de viento del INTA y los laboratorios aerodinámicos de la UC3M para realizar medidas de alta fidelidad con PIV, PTV, termografía infrarroja y anemometría de hilo caliente sobre capas límite en no equilibrio, flujos con gradiente de presión adverso, chorros impactantes y modelos de transporte terrestre a escala real."
+  figure_caption: "wind tunnel photo"

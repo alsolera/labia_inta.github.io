@@ -1,0 +1,14 @@
+{% assign t = site.data[page.lang | default: site.lang] %}
+{% if page.lang == 'es' %}{% assign es = true %}{% endif %}
+{% include page-head.html eyebrow=t.news.eyebrow title=t.news.title %}
+<div class="news-list">
+  {% for n in site.data.news %}
+  <article class="news-item">
+    <span class="news-date">{% if es and n.date_es %}{{ n.date_es }}{% else %}{{ n.date }}{% endif %}</span>
+    <div>
+      <h2>{% if es and n.title_es %}{{ n.title_es }}{% else %}{{ n.title }}{% endif %}</h2>
+      <p>{% if es and n.body_es %}{{ n.body_es }}{% else %}{{ n.body }}{% endif %}</p>
+    </div>
+  </article>
+  {% endfor %}
+</div>

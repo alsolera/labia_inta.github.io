@@ -1,49 +1,42 @@
-# Site Settings
-title: "Data-Driven Fluid Dynamics & Aerodynamics Lab"
-title_separator: "-"
-name: "Data-Driven Fluid Dynamics Lab"
-description: "Joint Research Group on Machine Learning, Turbulence & Aerodynamics — INTA & UC3M"
-url: "https://AeroML-INTA.github.io"
-baseurl: "/AeroML-INTA.github.io"
+# ── Site ──────────────────────────────────────────────────────────────
+title: "AeroML — Data-Driven Fluid Dynamics & Aerodynamics Lab"
+name: "AeroML"
+description: "Joint research group on machine learning, turbulence and aerodynamics — INTA & Universidad Carlos III de Madrid."
+# Repo is AeroML-INTA/AeroML-INTA → served from a sub-path, so baseurl carries the repo name.
+# If the repo is ever renamed to AeroML-INTA.github.io, set baseurl back to "".
+url: "https://aeroml-inta.github.io"
+baseurl: "/AeroML-INTA"
+repository: "AeroML-INTA/AeroML-INTA"
+lang: en
+locale: en_US
 
-# Profile Settings (Sidebar)
-author:
-  name: "Dr. Carlos Sanmiguel Vila"
-  avatar: "carlos_sanmiguel.jpg" # Place image in /images/
-  bio: "Principal Investigator & Tenured Scientist (INTA / UC3M)"
-  location: "Campus La Marañosa, Madrid, Spain"
-  employer: "INTA & Universidad Carlos III de Madrid"
-  links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope"
-      url: "mailto:csanvil@inta.es"
-    - label: "Google Scholar"
-      icon: "fab fa-fw fa-google"
-      url: "https://scholar.google.com/citations?user=a_olxpsAAAAJ"
-    - label: "ORCID"
-      icon: "fab fa-fw fa-orcid"
-      url: "https://orcid.org/0000-0003-0331-2854"
-    - label: "INTA"
-      icon: "fas fa-fw fa-building"
-      url: "https://www.inta.es"
-    - label: "UC3M"
-      icon: "fas fa-fw fa-university"
-      url: "https://www.uc3m.es"
-
-# Reading Files
+# ── Build ─────────────────────────────────────────────────────────────
 include:
   - _pages
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - tools
+  - README.md
 
-# Reading & Layout
-words_per_minute: 200
-comments:
-  provider: false
-mathjax: true
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+      lang: en
 
-# Plugins & Build Settings
 plugins:
   - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
   - jekyll-sitemap
-  
+  - jekyll-seo-tag
+
+sass:
+  style: compressed
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: mathjax

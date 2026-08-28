@@ -1,0 +1,19 @@
+{% assign t = site.data[page.lang | default: site.lang] %}
+{% if page.lang == 'es' %}{% assign es = true %}{% endif %}
+{% include page-head.html eyebrow=t.research.eyebrow title=t.research.title %}
+<div class="research-list">
+  {% for r in site.data.research %}
+  <article class="research-item">
+    <span class="num">{{ r.n }}</span>
+    <div>
+      <h2>{% if es and r.title_es %}{{ r.title_es }}{% else %}{{ r.title }}{% endif %}</h2>
+      <p>{% if es and r.body_es %}{{ r.body_es }}{% else %}{{ r.body }}{% endif %}</p>
+    </div>
+    {% if r.image %}
+      <img class="research-figure" src="{{ r.image | relative_url }}" alt="">
+    {% else %}
+      <div class="research-figure placeholder"><span>{{ r.figure_caption }}</span></div>
+    {% endif %}
+  </article>
+  {% endfor %}
+</div>

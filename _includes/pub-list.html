@@ -1,0 +1,15 @@
+{% assign years = include.pubs | group_by: "year" | sort: "name" | reverse %}
+{% for y in years %}
+<section class="pub-year">
+  <h2 class="year">{{ y.name }}</h2>
+  <div>
+    {% for p in y.items %}
+    <article class="pub">
+      <h3>{{ p.title }}</h3>
+      <p class="authors">{{ p.authors }}</p>
+      <p class="meta">{{ p.journal }}{% if p.volume %} {{ p.volume }}{% endif %} · <a href="https://doi.org/{{ p.doi }}">{{ p.doi }}</a></p>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endfor %}

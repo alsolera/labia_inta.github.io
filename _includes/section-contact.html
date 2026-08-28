@@ -1,0 +1,28 @@
+{% assign t = site.data[page.lang | default: site.lang] %}
+{% assign pi = site.data.team.pi %}
+{% include page-head.html eyebrow=t.contact.eyebrow title=t.contact.title %}
+
+<section class="split bordered">
+  <p class="eyebrow">{{ t.contact.reach_label }}</p>
+  <div>
+    <p class="lede sm">{{ t.contact.reach_lede }}</p>
+    <p class="strong">{{ pi.name }}</p>
+    <p class="mono-block">
+      <a href="mailto:csanvil@inta.es">csanvil@inta.es</a><br>
+      <a href="mailto:csanmigu@ing.uc3m.es">csanmigu@ing.uc3m.es</a>
+    </p>
+  </div>
+</section>
+
+<section class="split">
+  <p class="eyebrow">{{ t.contact.facilities_label }}</p>
+  <div class="grid-2 gap-lg">
+    {% for l in t.locations %}
+    <div class="loc">
+      <h2>{{ l.name }}</h2>
+      <p>{{ l.address }}</p>
+      <p class="loc-note">{{ l.note }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>

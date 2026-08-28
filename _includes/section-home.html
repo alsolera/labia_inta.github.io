@@ -1,0 +1,101 @@
+{% assign t = site.data[page.lang | default: site.lang] %}
+{% if page.lang == 'es' %}{% assign es = true %}{% endif %}
+{% assign research_page = site.pages | where: "ref", "research" | where: "lang", page.lang | first %}
+{% assign pubs_page = site.pages | where: "ref", "publications" | where: "lang", page.lang | first %}
+
+<main id="main">
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <p class="hero-eyebrow">{{ t.home.eyebrow }}</p>
+      <h1 class="hero-title">{{ t.home.title }}</h1>
+      <p class="hero-lede">{{ t.home.lede }}</p>
+      <div class="hero-cta">
+        <a class="btn btn-solid" href="{{ research_page.url | relative_url }}">{{ t.home.cta_research }}</a>
+        <a class="btn btn-ghost" href="{{ pubs_page.url | relative_url }}">{{ t.home.cta_pubs }}</a>
+      </div>
+    </div>
+    {% if site.data.images.hero %}
+      <img class="hero-figure" src="{{ site.data.images.hero | relative_url }}" alt="">
+    {% else %}
+      <div class="hero-figure placeholder dark"><span>{{ t.home.figure_caption }} →</span></div>
+    {% endif %}
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap split">
+    <p class="eyebrow">{{ t.home.group_label }}</p>
+    <div class="prose">
+      <p class="lead">{{ t.home.group_lead }}</p>
+      <p>{{ t.home.group_body }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="band-head">
+      <h2>{{ t.home.pillars_title }}</h2>
+      <a class="more" href="{{ research_page.url | relative_url }}">{{ t.home.pillars_all }}</a>
+    </div>
+    <div class="grid-2 tiles">
+      {% for p in t.pillars %}
+      <article class="tile">
+        <p class="num">{{ p.n }}</p>
+        <h3>{{ p.title }}</h3>
+        <p>{{ p.body }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">{{ t.home.recent_label }}</p>
+      <a class="more" href="{{ pubs_page.url | relative_url }}">{{ t.home.recent_all }}</a>
+    </div>
+    <div class="recent">
+      {% for p in site.data.publications limit: 3 %}
+      <article class="pub">
+        <h3>{{ p.title }}</h3>
+        <p class="authors">{{ p.authors }}</p>
+        <p class="meta">{{ p.journal }}{% if p.volume %} {{ p.volume }}{% endif %} · {{ p.year }} · <a href="https://doi.org/{{ p.doi }}">{{ p.doi }}</a></p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% if site.data.news and site.data.news.size > 0 %}
+<section class="band">
+  <div class="wrap split">
+    <p class="eyebrow">{{ t.home.news_label }}</p>
+    <div class="newsfeed">
+      {% for n in site.data.news limit: 3 %}
+      <article class="news-row">
+        <span class="news-date">{{ n.short | default: n.date }}</span>
+        <p>{% if es and n.body_es %}{{ n.body_es }}{% else %}{{ n.body }}{% endif %}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="band last">
+  <div class="wrap">
+    <p class="eyebrow mb">{{ t.home.locations_label }}</p>
+    <div class="grid-2 gap-lg">
+      {% for l in t.locations %}
+      <div class="loc">
+        <h3>{{ l.name }}</h3>
+        <p>{{ l.short }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+</main>

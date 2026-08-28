@@ -1,0 +1,97 @@
+locale: es_ES
+toggle: "EN"
+toggle_title: "View in English"
+tagline: "INTA · UC3M"
+
+nav:
+  home: Inicio
+  research: Investigación
+  team: Equipo
+  publications: Publicaciones
+  news: Actualidad
+  software: Software
+  positions: Vacantes
+  contact: Contacto
+
+home:
+  eyebrow: "Grupo de investigación conjunto · INTA · UC3M"
+  title: "Laboratorio de Dinámica de Fluidos y Aerodinámica basada en datos"
+  lede: "Explorando la intersección entre la mecánica de fluidos experimental y computacional, el modelado de orden reducido y el aprendizaje profundo."
+  cta_research: "Líneas de investigación"
+  cta_pubs: "Publicaciones"
+  figure_caption: "campo de flujo / instantánea PIV"
+  group_label: "El grupo"
+  group_lead: "Somos un grupo de investigación aeroespacial conjunto entre el Instituto Nacional de Técnica Aeroespacial (INTA) y la Universidad Carlos III de Madrid (UC3M)."
+  group_body: "Nuestra investigación une la dinámica de fluidos computacional (CFD) clásica y la aerodinámica experimental de alta fidelidad con arquitecturas modernas de aprendizaje automático (β-VAEs, modelos generativos y transformers) para desarrollar sustitutos aerodinámicos en tiempo real, técnicas de superresolución de flujo y sistemas de control activo de flujo."
+  pillars_title: "Líneas principales"
+  pillars_all: "Todas las líneas →"
+  recent_label: "Publicaciones recientes"
+  recent_all: "Ver todas →"
+  news_label: "Actualidad"
+  locations_label: "Afiliaciones y sedes"
+
+pillars:
+  - n: "01"
+    title: "Modelado de orden reducido no lineal (ROM)"
+    body: "Codificación de estructuras coherentes turbulentas espacio-temporales en variedades latentes compactas mediante autocodificadores variacionales β, y predicción de la dinámica multiescala con transformers."
+  - n: "02"
+    title: "Control activo de flujo basado en datos (AFC)"
+    body: "Diseño de marcos de control en lazo cerrado y control predictivo por modelo (MPC) para la reducción de resistencia aerodinámica y la manipulación de estelas no estacionarias."
+  - n: "03"
+    title: "Superresolución y diagnóstico de flujo"
+    body: "Reconstrucción de campos de velocidad y presión de alta resolución a partir de redes dispersas de sensores y técnicas ópticas de medida."
+  - n: "04"
+    title: "Capas límite y turbulencia de pared"
+    body: "Análisis experimental y numérico a alto número de Reynolds de capas límite turbulentas sometidas a gradiente de presión adverso (APG)."
+
+research:
+  eyebrow: "Investigación"
+  title: "Líneas de investigación y proyectos"
+
+publications:
+  eyebrow: "Publicaciones"
+  title: "Artículos en revistas"
+  note: "Generado desde files/publications.bib · orden cronológico inverso"
+
+team:
+  eyebrow: "Equipo"
+  title: "Equipo de investigación"
+  pi_label: "Investigador principal"
+  phd_label: "Doctorandos"
+  collab_label: "Colaboradores académicos"
+  interests_label: "Intereses de investigación"
+
+news:
+  eyebrow: "Actualidad"
+  title: "Novedades del grupo"
+
+software:
+  eyebrow: "Software"
+  title: "Código y datos"
+  note: "Estamos añadiendo repositorios y conjuntos de datos. Mientras tanto, escríbenos."
+
+positions:
+  eyebrow: "Vacantes"
+  title: "Únete al grupo"
+  lede: "Aceptamos consultas de doctorado, TFM y estancias de investigación durante todo el año. Escribe al investigador principal con tu CV y una breve nota sobre la línea de investigación que te interesa."
+
+contact:
+  eyebrow: "Contacto"
+  title: "Contacto y sedes"
+  reach_label: "Escríbenos"
+  reach_lede: "Para colaboraciones de investigación, consultas de doctorado o visitas académicas:"
+  facilities_label: "Instalaciones"
+
+locations:
+  - name: "Instituto Nacional de Técnica Aeroespacial (INTA)"
+    short: "Campus La Marañosa<br>San Martín de la Vega, Madrid"
+    address: "Campus La Marañosa<br>Ctra. M-301, km 10.500<br>28330 San Martín de la Vega, Madrid"
+    note: "Subdirección General de Sistemas Terrestres / Plataformas"
+  - name: "Universidad Carlos III de Madrid (UC3M)"
+    short: "Departamento de Ingeniería Aeroespacial<br>Campus de Leganés, Madrid"
+    address: "Campus de Leganés<br>Avda. de la Universidad, 30<br>28911 Leganés, Madrid"
+    note: "Departamento de Ingeniería Aeroespacial"
+
+footer:
+  name: "Laboratorio de Dinámica de Fluidos y Aerodinámica basada en datos"
+  line: "INTA · Universidad Carlos III de Madrid · Madrid, España"

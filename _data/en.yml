@@ -1,0 +1,97 @@
+locale: en_US
+toggle: "ES"
+toggle_title: "Ver en español"
+tagline: "INTA · UC3M"
+
+nav:
+  home: Home
+  research: Research
+  team: Team
+  publications: Publications
+  news: News
+  software: Software
+  positions: Positions
+  contact: Contact
+
+home:
+  eyebrow: "Joint research group · INTA · UC3M"
+  title: "Data-Driven Fluid Dynamics & Aerodynamics Lab"
+  lede: "Pioneering the intersection of experimental/computational fluid mechanics, reduced-order modeling, and deep learning."
+  cta_research: "Research lines"
+  cta_pubs: "Publications"
+  figure_caption: "flow-field / PIV snapshot"
+  group_label: "The group"
+  group_lead: "We are a joint aerospace research group operating across the National Institute for Aerospace Technology (INTA) and Universidad Carlos III de Madrid (UC3M)."
+  group_body: "Our research bridges classical computational fluid dynamics (CFD) and high-fidelity experimental aerodynamics with modern machine learning architectures (β-VAEs, generative models, and transformers) to develop real-time aerodynamic surrogates, flow super-resolution techniques, and active flow control systems."
+  pillars_title: "Core research pillars"
+  pillars_all: "All research lines →"
+  recent_label: "Recent publications"
+  recent_all: "See all →"
+  news_label: "Latest news"
+  locations_label: "Affiliations & locations"
+
+pillars:
+  - n: "01"
+    title: "Nonlinear Reduced-Order Modeling (ROM)"
+    body: "Encoding complex spatio-temporal turbulent coherent structures into compact latent manifolds via β-Variational Autoencoders and predicting multi-scale dynamics with Transformers."
+  - n: "02"
+    title: "Data-Driven Active Flow Control (AFC)"
+    body: "Designing closed-loop and model-predictive control (MPC) frameworks for aerodynamic drag reduction and unsteady wake manipulation."
+  - n: "03"
+    title: "Flow Super-Resolution & Diagnostics"
+    body: "Reconstructing high-resolution velocity and pressure fields from sparse sensor arrays and optical measurement techniques."
+  - n: "04"
+    title: "Boundary Layers & Wall Turbulence"
+    body: "High-Reynolds-number experimental and numerical analysis of turbulent boundary layers subject to adverse pressure gradients (APG)."
+
+research:
+  eyebrow: "Research"
+  title: "Research Lines & Projects"
+
+publications:
+  eyebrow: "Publications"
+  title: "Journal Articles"
+  note: "Generated from files/publications.bib · reverse chronological"
+
+team:
+  eyebrow: "Team"
+  title: "Research Team"
+  pi_label: "Principal Investigator"
+  phd_label: "Doctoral researchers"
+  collab_label: "Academic collaborators"
+  interests_label: "Research interests"
+
+news:
+  eyebrow: "News"
+  title: "Group news"
+
+software:
+  eyebrow: "Software"
+  title: "Code & data"
+  note: "Repositories and datasets are being added. Contact us in the meantime."
+
+positions:
+  eyebrow: "Positions"
+  title: "Join the group"
+  lede: "We welcome doctoral, master's thesis, and research-visit inquiries year-round. Write to the principal investigator with your CV and a short note on the research line that interests you."
+
+contact:
+  eyebrow: "Contact"
+  title: "Contact & Locations"
+  reach_label: "Get in touch"
+  reach_lede: "For research collaborations, graduate/doctoral inquiries, or academic visits:"
+  facilities_label: "Facilities"
+
+locations:
+  - name: "Instituto Nacional de Técnica Aeroespacial (INTA)"
+    short: "Campus La Marañosa<br>San Martín de la Vega, Madrid"
+    address: "Campus La Marañosa<br>Ctra. M-301, km 10.500<br>28330 San Martín de la Vega, Madrid"
+    note: "Subdirección General de Sistemas Terrestres / Plataformas"
+  - name: "Universidad Carlos III de Madrid (UC3M)"
+    short: "Department of Aerospace Engineering<br>Campus de Leganés, Madrid"
+    address: "Campus de Leganés<br>Avda. de la Universidad, 30<br>28911 Leganés, Madrid"
+    note: "Department of Aerospace Engineering"
+
+footer:
+  name: "Data-Driven Fluid Dynamics & Aerodynamics Lab"
+  line: "INTA · Universidad Carlos III de Madrid · Madrid, Spain"

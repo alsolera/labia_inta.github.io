@@ -1,0 +1,22 @@
+{% assign t = site.data[page.lang | default: site.lang] %}
+{% if page.ref %}{% assign alt = site.pages | where: "ref", page.ref | where_exp: "p", "p.lang != page.lang" | first %}{% endif %}
+{% if page.lang == 'es' %}{% assign home_url = '/es/' %}{% else %}{% assign home_url = '/' %}{% endif %}
+{% assign base = page.lang | default: site.lang %}
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="{{ home_url | relative_url }}">
+      <span class="brand-name">AeroML</span>
+      <span class="brand-sub">{{ t.tagline }}</span>
+    </a>
+    <nav class="site-nav" aria-label="{{ t.nav.home }}">
+      {% assign pages_in_lang = site.pages | where: "lang", base | where_exp: "p", "p.nav_order" | sort: "nav_order" %}
+      {% for p in pages_in_lang %}
+        <a href="{{ p.url | relative_url }}"{% if p.ref == page.ref %} aria-current="page"{% endif %}>{{ t.nav[p.ref] }}</a>
+      {% endfor %}
+      {% if alt %}
+        <a class="lang" href="{{ alt.url | relative_url }}" title="{{ t.toggle_title }}" hreflang="{% if base == 'en' %}es{% else %}en{% endif %}">{{ t.toggle }}</a>
+      {% endif %}
+    </nav>
+  </div>
+</header>
