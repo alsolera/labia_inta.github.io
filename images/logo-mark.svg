@@ -1,38 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 44" width="96" height="44" role="img" aria-labelledby="aeroml-mark-title">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 44" width="92" height="44" role="img" aria-labelledby="aeroml-mark-title">
   <title id="aeroml-mark-title">AeroML</title>
+  <!--
+    Nav mark: the full logo (images/logo.svg) with the output layer removed.
+    Same airfoil, same streamlines, same node coordinates — a 3-2 network
+    instead of 3-2-2, so it stays a subset of the full mark rather than a
+    different drawing. Stroke weights are nudged up for small sizes.
+  -->
   <defs>
-    <linearGradient id="aeroml-mark-flow" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="96" y2="0">
+    <linearGradient id="aeroml-mark-flow" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="92" y2="0">
       <stop offset="0" stop-color="#171b2b"/>
       <stop offset="0.45" stop-color="#171b2b"/>
-      <stop offset="0.95" stop-color="#4b3f9e"/>
+      <stop offset="1" stop-color="#4b3f9e"/>
     </linearGradient>
   </defs>
 
   <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <!-- two streamlines, one smooth curve each, into the two input nodes -->
-    <path d="M2 9 C22 2.6, 42 4.2, 60.4 11.4"
-          stroke="url(#aeroml-mark-flow)" stroke-width="2"/>
-    <path d="M3 15 C22 9.5, 44 14, 60.5 27.2"
-          stroke="url(#aeroml-mark-flow)" stroke-width="2"/>
+    <!-- streamlines: identical to the full mark -->
+    <path d="M2 9 C22 2.6, 44 3.2, 62.6 7.6"
+          stroke="url(#aeroml-mark-flow)" stroke-width="1.9"/>
+    <path d="M3 15 C22 9.2, 44 12.4, 62.6 19.4"
+          stroke="url(#aeroml-mark-flow)" stroke-width="1.9"/>
+    <!-- third streamline, detached from the trailing edge -->
+    <path d="M56.6 33.2 C58.8 33.1, 60.6 32.6, 62.8 31.9"
+          stroke="url(#aeroml-mark-flow)" stroke-width="1.7"/>
 
-    <!-- airfoil: same profile as the full mark -->
+    <!-- airfoil: identical to the full mark -->
     <path d="M51 32.9 C41 26.9, 30 20.8, 20.8 21.5 C13.4 22.1, 7.3 25.8, 8.5 29.4
              C9.5 32.8, 18.5 34.4, 30 34.4 C40 34.4, 47 33.5, 51 32.9 Z"
           stroke="#171b2b" stroke-width="3"/>
 
-    <!-- reduced network: 2 - 2, fully connected -->
-    <g stroke="#4b3f9e" stroke-width="1.5">
-      <path d="M64 13 L86 13"/>
-      <path d="M64 13 L86 29"/>
-      <path d="M64 29 L86 13"/>
-      <path d="M64 29 L86 29"/>
+    <!-- network: 3 inputs, 2 outputs, fully connected -->
+    <g stroke="#4b3f9e" stroke-width="1.35">
+      <path d="M66 8 L87 14"/>
+      <path d="M66 8 L87 26"/>
+      <path d="M66 20 L87 14"/>
+      <path d="M66 20 L87 26"/>
+      <path d="M66 32 L87 14"/>
+      <path d="M66 32 L87 26"/>
     </g>
   </g>
 
-  <g fill="#f9f8f6" stroke="#4b3f9e" stroke-width="2">
-    <circle cx="64" cy="13" r="3.8"/>
-    <circle cx="64" cy="29" r="3.8"/>
-    <circle cx="86" cy="13" r="3.8"/>
-    <circle cx="86" cy="29" r="3.8"/>
+  <g fill="#f9f8f6" stroke="#4b3f9e" stroke-width="1.85">
+    <circle cx="66" cy="8" r="3.5"/>
+    <circle cx="66" cy="20" r="3.5"/>
+    <circle cx="66" cy="32" r="3.5"/>
+    <circle cx="87" cy="14" r="3.5"/>
+    <circle cx="87" cy="26" r="3.5"/>
   </g>
 </svg>
