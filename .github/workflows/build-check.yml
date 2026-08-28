@@ -29,3 +29,42 @@ jobs:
         run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
+
+      # A green build does not mean a correct page: a bad Liquid lookup
+      # resolves to nil and renders as an empty string without erroring.
+      # These assertions fail if the templates stop emitting real text.
+      - name: Check rendered content
+        run: |
+          set -euo pipefail
+          fail=0
+          check() {
+            if grep -qF "$2" "$1"; then
+              echo "ok   $1: $2"
+            else
+              echo "FAIL $1: expected '$2'"
+              fail=1
+            fi
+          }
+          # Strings that come from _data/en.yml and es.yml through the `t`
+          # lookup, so a nil `t` fails these rather than passing silently.
+          check _site/index.html "Core research pillars"
+          check _site/index.html "Joint research group"
+          check _site/es/index.html "Líneas de investigación"
+          check _site/es/index.html "Grupo de investigación conjunto"
+          check _site/contact/index.html "Get in touch"
+          check _site/contact/index.html "Marañosa"
+
+          # Strings that come from the content data files.
+          check _site/team/index.html "Sanmiguel"
+          check _site/publications/index.html "Nature Communications"
+          check _site/research/index.html "Active Flow Control"
+
+          # Empty nav labels are the signature of the nil-lookup bug.
+          if grep -qE '<a href="[^"]*"[^>]*></a>' _site/index.html; then
+            echo "FAIL _site/index.html: empty nav link text"
+            fail=1
+          else
+            echo "ok   _site/index.html: nav links have labels"
+          fi
+
+          exit $fail

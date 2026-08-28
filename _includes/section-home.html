@@ -1,4 +1,4 @@
-{% assign t = site.data[page.lang | default: site.lang] %}
+{% assign t_lang = page.lang | default: site.lang %}{% assign t = site.data[t_lang] %}
 {% if page.lang == 'es' %}{% assign es = true %}{% endif %}
 {% assign research_page = site.pages | where: "ref", "research" | where: "lang", page.lang | first %}
 {% assign pubs_page = site.pages | where: "ref", "publications" | where: "lang", page.lang | first %}

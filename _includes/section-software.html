@@ -1,4 +1,4 @@
-{% assign t = site.data[page.lang | default: site.lang] %}
+{% assign t_lang = page.lang | default: site.lang %}{% assign t = site.data[t_lang] %}
 {% if page.lang == 'es' %}{% assign es = true %}{% endif %}
 {% include page-head.html eyebrow=t.software.eyebrow title=t.software.title %}
 {% if site.data.software and site.data.software.size > 0 %}

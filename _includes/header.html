@@ -1,4 +1,4 @@
-{% assign t = site.data[page.lang | default: site.lang] %}
+{% assign t_lang = page.lang | default: site.lang %}{% assign t = site.data[t_lang] %}
 {% if page.ref %}{% assign alt = site.pages | where: "ref", page.ref | where_exp: "p", "p.lang != page.lang" | first %}{% endif %}
 {% if page.lang == 'es' %}{% assign home_url = '/es/' %}{% else %}{% assign home_url = '/' %}{% endif %}
 {% assign base = page.lang | default: site.lang %}

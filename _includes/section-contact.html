@@ -1,4 +1,4 @@
-{% assign t = site.data[page.lang | default: site.lang] %}
+{% assign t_lang = page.lang | default: site.lang %}{% assign t = site.data[t_lang] %}
 {% assign pi = site.data.team.pi %}
 {% include page-head.html eyebrow=t.contact.eyebrow title=t.contact.title %}
 
