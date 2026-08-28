@@ -30,13 +30,13 @@ author_profile: true
 * **Profiles:** [Google Scholar](https://scholar.google.com/citations?user=SiDjIboAAAAJ) | [ORCID](https://orcid.org/0009-0005-4426-6219)
 
 ### Juan Alfaro
-* **Role:** PhD Candidate / Computational Engineer
+* **Role:** PhD Candidate / Research Engineer
 * **Affiliation:** INTA & Universidad Carlos III de Madrid (UC3M)
 * **Research Focus:** Computational Fluid Dynamics (CFD), High-Performance Computing, Turbulence Modeling, Aerodynamic Shape Optimization
 * **Profiles:** [ORCID](https://orcid.org/0009-0006-5744-8772)
 
 ### Víctor Duro
-* **Role:** PhD Candidate / Systems & Instrumentation Engineer
+* **Role:** PhD Candidate / Research Engineer
 * **Affiliation:** INTA & Universidad Carlos III de Madrid (UC3M)
 * **Research Focus:** Sensor Fusion, Data Acquisition Architectures, Aerodynamic Instrumentation, Real-Time Flow Estimation
 * **Profiles:** [Google Scholar](https://scholar.google.es/citations?user=EgljrGUAAAAJ) | [ORCID](https://orcid.org/0000-0002-9746-7912)
