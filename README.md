@@ -4,14 +4,14 @@ Jekyll source for **https://aeroml-inta.github.io**.
 
 ## Deploying
 
-The repository is `AeroML-INTA/AeroML-INTA`, so GitHub serves the site from a sub-path,
-`https://aeroml-inta.github.io/AeroML-INTA/`, and `_config.yml` sets:
+The repository is named `AeroML-INTA.github.io`, which GitHub serves at the org root,
+`https://aeroml-inta.github.io/`, so `_config.yml` sets:
 
-    baseurl: "/AeroML-INTA"
+    baseurl: ""
 
-If the repository is ever renamed to `AeroML-INTA.github.io`, it is served at the org root
-instead and `baseurl` goes back to `""`. Every internal link uses `relative_url`, so that
-one line is the only change needed either way.
+If the repository is ever renamed back to `AeroML-INTA`, it is served from a sub-path
+instead and `baseurl` becomes `"/AeroML-INTA"`. Every internal link uses `relative_url`,
+so that one line is the only change needed either way.
 
 Deployment runs through `.github/workflows/pages.yml`, which needs the Pages source switched
 away from the classic branch build: **Settings → Pages → Build and deployment → Source:
