@@ -3,8 +3,8 @@ title: "Data-Driven Fluid Dynamics & Aerodynamics Lab"
 title_separator: "-"
 name: "Data-Driven Fluid Dynamics Lab"
 description: "Joint Research Group on Machine Learning, Turbulence & Aerodynamics — INTA & UC3M"
-url: "https://alsolera.github.io"
-baseurl: "/labia_inta.github.io"
+url: "https://AeroML-INTA.github.io"
+baseurl: "/AeroML-INTA.github.io"
 
 # Profile Settings (Sidebar)
 author:
