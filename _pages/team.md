@@ -45,6 +45,6 @@ author_profile: true
 
 ## Academic Collaborators
 
-* **Prof. Ricardo Vinuesa** — Associate Professor, University of Michigan / KTH Royal Institute of Technology
+* **Prof. Ricardo Vinuesa** — Associate Chair for Research & Associate Professor, University of Michigan
 * **Prof. Stefano Discetti** — Full Professor, Universidad Carlos III de Madrid (UC3M)
-* **Prof. Andrea Ianiro** — Associate Professor, Universidad Carlos III de Madrid (UC3M)
+* **Prof. Andrea Ianiro** — Full Professor, Universidad Carlos III de Madrid (UC3M)
