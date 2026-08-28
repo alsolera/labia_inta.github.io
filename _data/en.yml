@@ -51,7 +51,8 @@ research:
 publications:
   eyebrow: "Publications"
   title: "Journal Articles"
-  note: "Generated from files/publications.bib · reverse chronological"
+  # note: optional line rendered under the title. Keep it reader-facing;
+  # build details belong in the README, not on the public page.
 
 team:
   eyebrow: "Team"

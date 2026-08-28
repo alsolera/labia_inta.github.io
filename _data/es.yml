@@ -51,7 +51,8 @@ research:
 publications:
   eyebrow: "Publicaciones"
   title: "Artículos en revistas"
-  note: "Generado desde files/publications.bib · orden cronológico inverso"
+  # note: línea opcional bajo el título. Debe ser texto para el lector;
+  # los detalles de compilación van en el README, no en la web pública.
 
 team:
   eyebrow: "Equipo"
