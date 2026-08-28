@@ -1,15 +1,15 @@
 % AeroML logo — TikZ version, for LaTeX papers, posters and slides.
 % The website uses images/logo.svg; this file is the print equivalent.
+% Keep the two in sync: the geometry below is copied from that file.
 %
 % Usage:
 %   \usepackage{tikz}
 %   \input{brand/logo-tikz.tex}
-%   \aeromllogo          % default size, about 27 mm wide
-%   \aeromllogo[2]       % double size
+%   \aeromllogo          % 1 unit = 1pt, so about 42 mm wide
+%   \aeromllogo[0.6]     % smaller
 %
-% Geometry is copied from images/logo.svg. The picture uses yscale=-1 so the
-% coordinates match the SVG viewBox directly (y grows downward); keep that in
-% mind before editing a control point.
+% The picture uses yscale=-1 so coordinates match the SVG viewBox directly
+% (y grows downward); keep that in mind before editing a control point.
 %
 % The SVG fades the streamlines from navy to violet along x. A stroke gradient
 % is not worth the trouble in TikZ, so here they are solid navy. Everything
@@ -24,34 +24,37 @@
     x=#1 pt, y=#1 pt, yscale=-1,
     line cap=round, line join=round,
     node mark/.style={circle, draw=aeromlviolet, fill=aeromlpaper,
-                      line width=#1*0.7pt, inner sep=0pt, minimum size=#1*4.8pt},
+                      line width=#1*0.6pt, inner sep=0pt,
+                      minimum size=#1*6.6pt},
   ]
 
-  % streamlines over the wing, resolving into the two input nodes
+  % streamlines: one smooth curve each, into the three input nodes
   \draw[aeromlnavy, line width=#1*0.67pt]
-    (2,8.5) .. controls (20,2) and (44,1.5) .. (57,5.5)
-            .. controls (61.5,6.9) and (63.2,8.8) .. (64.9,10.3);
+    (2,9) .. controls (22,2.6) and (44,3.2) .. (62.6,7.6);
   \draw[aeromlnavy, line width=#1*0.67pt]
-    (3,15) .. controls (20,9) and (44,9.5) .. (56,15.5)
-           .. controls (60.5,18) and (61.4,24.6) .. (65,27.9);
+    (3,15) .. controls (22,9.2) and (44,12.4) .. (62.6,19.4);
+
+  % third streamline, detached: starts clear of the trailing edge
+  \draw[aeromlnavy, line width=#1*0.6pt]
+    (56.6,33.2) .. controls (58.8,33.1) and (60.6,32.6) .. (62.8,31.9);
 
   % airfoil: round leading edge left, sharp trailing edge right
   \draw[aeromlnavy, line width=#1*1.06pt]
-    (57,33.5) .. controls (45,27) and (32,20) .. (22.5,20.8)
-              .. controls (14.5,21.5) and (7.8,25.6) .. (9,29.5)
-              .. controls (10.1,33.1) and (20,34.8) .. (32.5,34.8)
-              .. controls (44,34.8) and (52.2,34) .. (57,33.5) -- cycle;
+    (51,32.9) .. controls (41,26.9) and (30,20.8) .. (20.8,21.5)
+              .. controls (13.4,22.1) and (7.3,25.8) .. (8.5,29.4)
+              .. controls (9.5,32.8) and (18.5,34.4) .. (30,34.4)
+              .. controls (40,34.4) and (47,33.5) .. (51,32.9) -- cycle;
 
-  % network: two inputs, one latent node, two outputs
-  \draw[aeromlviolet, line width=#1*0.57pt]
-    (68,11) -- (85,20) -- (99,11);
-  \draw[aeromlviolet, line width=#1*0.57pt]
-    (68,29) -- (85,20) -- (99,29);
+  % generic feedforward network, 3 - 2 - 2, fully connected
+  \foreach \sy in {8,20,32}{%
+    \foreach \ty in {14,26}{%
+      \draw[aeromlviolet, line width=#1*0.42pt] (66,\sy) -- (87,\ty);}}
+  \foreach \sy in {14,26}{%
+    \foreach \ty in {14,26}{%
+      \draw[aeromlviolet, line width=#1*0.42pt] (87,\sy) -- (108,\ty);}}
 
-  \node[node mark] at (68,11) {};
-  \node[node mark] at (68,29) {};
-  \node[node mark] at (85,20) {};
-  \node[node mark] at (99,11) {};
-  \node[node mark] at (99,29) {};
+  \foreach \y in {8,20,32}{\node[node mark] at (66,\y) {};}
+  \foreach \y in {14,26}{\node[node mark] at (87,\y) {};}
+  \foreach \y in {14,26}{\node[node mark] at (108,\y) {};}
 \end{tikzpicture}%
 }
