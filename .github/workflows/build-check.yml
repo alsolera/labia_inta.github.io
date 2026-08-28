@@ -74,11 +74,12 @@ jobs:
               echo "ok   $1: no '$2'"
             fi
           }
-          # Logos must be referenced and actually shipped: the simplified
-          # mark in the nav, the full one large in the hero.
-          check _site/index.html "logo-mark.svg"
+          # One mark everywhere: the full logo in the nav, and its
+          # light-on-dark twin large in the hero. logo-mark.svg is the
+          # reduced 3-2 variant, kept available but not currently used.
+          check _site/index.html "logo.svg"
           check _site/index.html "logo-light.svg"
-          check _site/es/index.html "logo-mark.svg"
+          check _site/es/index.html "logo.svg"
           for f in logo.svg logo-mark.svg logo-light.svg; do
             if [ -f "_site/images/$f" ]; then
               echo "ok   _site/images/$f exists"
