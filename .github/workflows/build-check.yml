@@ -58,6 +58,25 @@ jobs:
           check _site/team/index.html "Sanmiguel"
           check _site/publications/index.html "Nature Communications"
           check _site/research/index.html "Active Flow Control"
+          check _site/projects/index.html "As principal investigator"
+          check _site/projects/index.html "PREVENT"
+          check _site/projects/index.html "COTURB"
+          check _site/es/proyectos/index.html "Como investigador principal"
+          check _site/es/proyectos/index.html "TIFON"
+
+          # The group is affiliated with INTA only. Collaborators keep their
+          # own UC3M affiliations, so this is checked where it must not appear.
+          absent() {
+            if grep -qF "$2" "$1"; then
+              echo "FAIL $1: '$2' should not appear here"
+              fail=1
+            else
+              echo "ok   $1: no '$2'"
+            fi
+          }
+          absent _site/index.html "Carlos III"
+          absent _site/contact/index.html "Carlos III"
+          absent _site/es/index.html "Carlos III"
 
           # Empty nav labels are the signature of the nil-lookup bug.
           if grep -qE '<a href="[^"]*"[^>]*></a>' _site/index.html; then

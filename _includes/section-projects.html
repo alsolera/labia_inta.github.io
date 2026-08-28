@@ -1,0 +1,46 @@
+{% assign t_lang = page.lang | default: site.lang %}{% assign t = site.data[t_lang] %}
+{% if page.lang == 'es' %}{% assign es = true %}{% endif %}
+{% include page-head.html eyebrow=t.projects.eyebrow title=t.projects.title %}
+
+{% assign led = site.data.projects | where: "role", "pi" %}
+{% assign joined = site.data.projects | where: "role", "member" %}
+
+{% if led.size > 0 %}
+<p class="eyebrow mb">{{ t.projects.lead_label }}</p>
+<div class="project-list">
+  {% for p in led %}
+  <article class="project-item">
+    <span class="project-period">{{ p.period }}</span>
+    <div>
+      <h2><span class="project-acronym">{{ p.acronym }}</span>{% if es and p.title_es %}{{ p.title_es }}{% else %}{{ p.title }}{% endif %}</h2>
+      <p class="project-meta">
+        {% if es and p.funder_es %}{{ p.funder_es }}{% else %}{{ p.funder }}{% endif %}
+        {%- if p.budget %} · {{ p.budget }}
+          {%- if p.budget_note %} ({% if es and p.budget_note_es %}{{ p.budget_note_es }}{% else %}{{ p.budget_note }}{% endif %}){% endif -%}
+        {% endif %}
+      </p>
+    </div>
+  </article>
+  {% endfor %}
+</div>
+{% endif %}
+
+{% if joined.size > 0 %}
+<p class="eyebrow mb section-gap">{{ t.projects.member_label }}</p>
+<div class="project-list">
+  {% for p in joined %}
+  <article class="project-item">
+    <span class="project-period">{{ p.period }}</span>
+    <div>
+      <h2><span class="project-acronym">{{ p.acronym }}</span>{% if es and p.title_es %}{{ p.title_es }}{% else %}{{ p.title }}{% endif %}</h2>
+      <p class="project-meta">
+        {% if es and p.funder_es %}{{ p.funder_es }}{% else %}{{ p.funder }}{% endif %}
+        {%- if p.budget %} · {{ p.budget }}
+          {%- if p.budget_note %} ({% if es and p.budget_note_es %}{{ p.budget_note_es }}{% else %}{{ p.budget_note }}{% endif %}){% endif -%}
+        {% endif %}
+      </p>
+    </div>
+  </article>
+  {% endfor %}
+</div>
+{% endif %}

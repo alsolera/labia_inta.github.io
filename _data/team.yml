@@ -1,8 +1,8 @@
 pi:
   name: "Dr. Carlos Sanmiguel Vila"
   photo: "/images/carlos_sanmiguel.jpg"
-  role: "Tenured Scientist (Científico Titular) · INTA & Universidad Carlos III de Madrid (UC3M)"
-  role_es: "Científico Titular · INTA y Universidad Carlos III de Madrid (UC3M)"
+  role: "Tenured Scientist (Científico Titular) · Instituto Nacional de Técnica Aeroespacial (INTA)"
+  role_es: "Científico Titular · Instituto Nacional de Técnica Aeroespacial (INTA)"
   interests: "Turbulence, Wall-Bounded Flows, Experimental Aerodynamics, Machine Learning."
   interests_es: "Turbulencia, flujos de pared, aerodinámica experimental y aprendizaje automático."
   scholar: "https://scholar.google.com/citations?user=a_olxpsAAAAJ"

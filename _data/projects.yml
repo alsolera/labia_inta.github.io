@@ -1,0 +1,63 @@
+# Funded projects, newest first.
+#
+# role: pi      → listed under "As principal investigator"
+# role: member  → listed under "As research team member"
+#
+# `budget` is optional: delete the line and the figure simply disappears.
+# `budget_note` is for qualifiers such as the share held by INTA.
+
+- acronym: "PREVENT"
+  role: pi
+  period: "2025 – 2026"
+  title: "Prediction and Detection of Extreme Turbulent Events"
+  title_es: "Predicción y Detección de Eventos Turbulentos Extremos"
+  funder: "Fundación BBVA (Beca BBVA 2024), Spain"
+  funder_es: "Fundación BBVA (Beca BBVA 2024), España"
+  budget: "50,000 €"
+
+- acronym: "TIFON"
+  role: pi
+  period: "2024 – 2026"
+  title: "Intelligent Technologies for Manufacturing, Design and Operations in Industrial Environments"
+  title_es: "Tecnologías Inteligentes para la Fabricación, el Diseño y las Operaciones en entornos iNdustriales"
+  funder: "Spanish State Research Agency (AEI), Spain"
+  funder_es: "Agencia Estatal de Investigación (AEI), España"
+  budget: "510,000 €"
+
+- acronym: "ODE4HERA"
+  role: member
+  period: "2024 – 2026"
+  title: "Open Digital Environment for Hybrid-Electric Regional Architectures"
+  title_es: "Entorno digital abierto para arquitecturas regionales híbrido-eléctricas"
+  funder: "European Commission, Clean Aviation Programme"
+  funder_es: "Comisión Europea, Programa Clean Aviation"
+  budget: "196,250 €"
+  budget_note: "INTA budget"
+  budget_note_es: "presupuesto INTA"
+
+- acronym: "EXCALIBUR"
+  role: member
+  period: "2023 – 2026"
+  title: "Extracting machine-learning strategies for turbulent flow control"
+  title_es: "Estrategias de aprendizaje automático para el control de flujos turbulentos"
+  funder: "Spanish State Research Agency (AEI), Spain"
+  funder_es: "Agencia Estatal de Investigación (AEI), España"
+  budget: "289,250 €"
+
+- acronym: "ACCREDITATION"
+  role: member
+  period: "2022 – 2024"
+  title: "Artificial-intelligence active flow control for reduction of transport emissions"
+  title_es: "Control activo de flujo con inteligencia artificial para la reducción de emisiones del transporte"
+  funder: "Spanish State Research Agency (AEI) and European Union NextGenerationEU/PRTR"
+  funder_es: "Agencia Estatal de Investigación (AEI) y Unión Europea NextGenerationEU/PRTR"
+  budget: "187,910 €"
+
+- acronym: "COTURB"
+  role: member
+  period: "2022 – 2024"
+  title: "Coherent structures in wall-bounded turbulence"
+  title_es: "Estructuras coherentes en turbulencia de pared"
+  funder: "European Research Council, ERC Advanced Grant #669505"
+  funder_es: "European Research Council, ERC Advanced Grant #669505"
+  budget: "2,497,000 €"

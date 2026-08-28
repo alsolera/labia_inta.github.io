@@ -1,7 +1,7 @@
 # ── Site ──────────────────────────────────────────────────────────────
 title: "AeroML — Data-Driven Fluid Dynamics & Aerodynamics Lab"
 name: "AeroML"
-description: "Joint research group on machine learning, turbulence and aerodynamics — INTA & Universidad Carlos III de Madrid."
+description: "Research group on machine learning, turbulence and aerodynamics at INTA, Madrid."
 # Repo is AeroML-INTA/AeroML-INTA.github.io → served at the org root, so baseurl is empty.
 # If the repo is ever renamed back to AeroML-INTA, set baseurl to "/AeroML-INTA".
 url: "https://aeroml-inta.github.io"

@@ -1,11 +1,12 @@
 locale: en_US
 toggle: "ES"
 toggle_title: "Ver en español"
-tagline: "INTA · UC3M"
+tagline: "INTA"
 
 nav:
   home: Home
   research: Research
+  projects: Projects
   team: Team
   publications: Publications
   news: News
@@ -14,14 +15,14 @@ nav:
   contact: Contact
 
 home:
-  eyebrow: "Joint research group · INTA · UC3M"
+  eyebrow: "Research group · INTA"
   title: "Data-Driven Fluid Dynamics & Aerodynamics Lab"
   lede: "Pioneering the intersection of experimental/computational fluid mechanics, reduced-order modeling, and deep learning."
   cta_research: "Research lines"
   cta_pubs: "Publications"
   figure_caption: "flow-field / PIV snapshot"
   group_label: "The group"
-  group_lead: "We are a joint aerospace research group operating across the National Institute for Aerospace Technology (INTA) and Universidad Carlos III de Madrid (UC3M)."
+  group_lead: "We are an aerospace research group at the National Institute for Aerospace Technology (INTA), based at Campus La Marañosa in Madrid."
   group_body: "Our research bridges classical computational fluid dynamics (CFD) and high-fidelity experimental aerodynamics with modern machine learning architectures (β-VAEs, generative models, and transformers) to develop real-time aerodynamic surrogates, flow super-resolution techniques, and active flow control systems."
   pillars_title: "Core research pillars"
   pillars_all: "All research lines →"
@@ -47,6 +48,12 @@ pillars:
 research:
   eyebrow: "Research"
   title: "Research Lines & Projects"
+
+projects:
+  eyebrow: "Projects"
+  title: "Funded Projects"
+  lead_label: "As principal investigator"
+  member_label: "As research team member"
 
 publications:
   eyebrow: "Publications"
@@ -88,11 +95,7 @@ locations:
     short: "Campus La Marañosa<br>San Martín de la Vega, Madrid"
     address: "Campus La Marañosa<br>Ctra. M-301, km 10.500<br>28330 San Martín de la Vega, Madrid"
     note: "Subdirección General de Sistemas Terrestres / Plataformas"
-  - name: "Universidad Carlos III de Madrid (UC3M)"
-    short: "Department of Aerospace Engineering<br>Campus de Leganés, Madrid"
-    address: "Campus de Leganés<br>Avda. de la Universidad, 30<br>28911 Leganés, Madrid"
-    note: "Department of Aerospace Engineering"
 
 footer:
   name: "Data-Driven Fluid Dynamics & Aerodynamics Lab"
-  line: "INTA · Universidad Carlos III de Madrid · Madrid, Spain"
+  line: "INTA · Madrid, Spain"

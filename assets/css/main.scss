@@ -221,6 +221,15 @@ a:hover { color: var(--violet-dk); text-decoration: underline; }
 .collabs .collab:last-child { border-bottom: 1px solid var(--rule); }
 .collab-name { font-family: var(--serif); font-size: 19px; color: var(--ink); }
 
+/* ── projects ───────────────────────────────────────────────── */
+.project-item { display: grid; grid-template-columns: 140px 1fr; gap: 40px; padding: 26px 0; border-top: 1px solid var(--rule); }
+.project-list .project-item:last-child { border-bottom: 1px solid var(--rule); }
+.project-item h2 { margin: 0 0 8px; font-family: var(--serif); font-weight: 500; font-size: 22px; line-height: 1.3; color: var(--ink); text-wrap: pretty; }
+.project-acronym { font-family: var(--mono); font-size: 13px; letter-spacing: 0.06em; color: var(--violet); margin-right: 12px; }
+.project-period { font-family: var(--mono); font-size: 12.5px; color: var(--muted); }
+.project-meta { margin: 0; font-family: var(--mono); font-size: 12px; line-height: 1.6; color: var(--muted); }
+.eyebrow.section-gap { margin-top: 56px; }
+
 /* ── news ───────────────────────────────────────────────────── */
 .news-item { display: grid; grid-template-columns: 140px 1fr; gap: 40px; padding: 30px 0; border-top: 1px solid var(--rule); }
 .news-list .news-item:last-child { border-bottom: 1px solid var(--rule); }
@@ -293,6 +302,9 @@ a:hover { color: var(--violet-dk); text-decoration: underline; }
   .collab { grid-template-columns: 1fr; gap: 4px; }
   .news-item, .news-row { grid-template-columns: 1fr; gap: 8px; }
   .news-item h2 { font-size: 21px; }
+  .project-item { grid-template-columns: 1fr; gap: 8px; }
+  .project-item h2 { font-size: 20px; }
+  .project-acronym { display: block; margin-right: 0; margin-bottom: 4px; }
   .footer-inner { grid-template-columns: 1fr; gap: 26px; align-items: start; }
 }
 

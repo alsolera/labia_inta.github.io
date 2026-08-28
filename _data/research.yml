@@ -23,6 +23,6 @@
 - n: "04"
   title: "Experimental Aerodynamics & Wind Tunnel Testing"
   title_es: "Aerodinámica experimental y ensayos en túnel de viento"
-  body: "Utilizing INTA's wind tunnel facilities and UC3M aerodynamic laboratories to conduct high-fidelity PIV, PTV, infrared thermography, and hot-wire measurements on non-equilibrium boundary layers, adverse pressure gradient flows, impinging jets, and full-scale ground transportation models."
-  body_es: "Utilizamos las instalaciones de túnel de viento del INTA y los laboratorios aerodinámicos de la UC3M para realizar medidas de alta fidelidad con PIV, PTV, termografía infrarroja y anemometría de hilo caliente sobre capas límite en no equilibrio, flujos con gradiente de presión adverso, chorros impactantes y modelos de transporte terrestre a escala real."
+  body: "Utilizing INTA's wind tunnel facilities and aerodynamic laboratories to conduct high-fidelity PIV, PTV, infrared thermography, and hot-wire measurements on non-equilibrium boundary layers, adverse pressure gradient flows, impinging jets, and full-scale ground transportation models."
+  body_es: "Utilizamos las instalaciones de túnel de viento y los laboratorios aerodinámicos del INTA para realizar medidas de alta fidelidad con PIV, PTV, termografía infrarroja y anemometría de hilo caliente sobre capas límite en no equilibrio, flujos con gradiente de presión adverso, chorros impactantes y modelos de transporte terrestre a escala real."
   figure_caption: "wind tunnel photo"

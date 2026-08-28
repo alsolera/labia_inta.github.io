@@ -1,11 +1,12 @@
 locale: es_ES
 toggle: "EN"
 toggle_title: "View in English"
-tagline: "INTA · UC3M"
+tagline: "INTA"
 
 nav:
   home: Inicio
   research: Investigación
+  projects: Proyectos
   team: Equipo
   publications: Publicaciones
   news: Actualidad
@@ -14,14 +15,14 @@ nav:
   contact: Contacto
 
 home:
-  eyebrow: "Grupo de investigación conjunto · INTA · UC3M"
+  eyebrow: "Grupo de investigación · INTA"
   title: "Laboratorio de Dinámica de Fluidos y Aerodinámica basada en datos"
   lede: "Explorando la intersección entre la mecánica de fluidos experimental y computacional, el modelado de orden reducido y el aprendizaje profundo."
   cta_research: "Líneas de investigación"
   cta_pubs: "Publicaciones"
   figure_caption: "campo de flujo / instantánea PIV"
   group_label: "El grupo"
-  group_lead: "Somos un grupo de investigación aeroespacial conjunto entre el Instituto Nacional de Técnica Aeroespacial (INTA) y la Universidad Carlos III de Madrid (UC3M)."
+  group_lead: "Somos un grupo de investigación aeroespacial del Instituto Nacional de Técnica Aeroespacial (INTA), con sede en el Campus La Marañosa, en Madrid."
   group_body: "Nuestra investigación une la dinámica de fluidos computacional (CFD) clásica y la aerodinámica experimental de alta fidelidad con arquitecturas modernas de aprendizaje automático (β-VAEs, modelos generativos y transformers) para desarrollar sustitutos aerodinámicos en tiempo real, técnicas de superresolución de flujo y sistemas de control activo de flujo."
   pillars_title: "Líneas principales"
   pillars_all: "Todas las líneas →"
@@ -47,6 +48,12 @@ pillars:
 research:
   eyebrow: "Investigación"
   title: "Líneas de investigación y proyectos"
+
+projects:
+  eyebrow: "Proyectos"
+  title: "Proyectos financiados"
+  lead_label: "Como investigador principal"
+  member_label: "Como miembro del equipo de investigación"
 
 publications:
   eyebrow: "Publicaciones"
@@ -88,11 +95,7 @@ locations:
     short: "Campus La Marañosa<br>San Martín de la Vega, Madrid"
     address: "Campus La Marañosa<br>Ctra. M-301, km 10.500<br>28330 San Martín de la Vega, Madrid"
     note: "Subdirección General de Sistemas Terrestres / Plataformas"
-  - name: "Universidad Carlos III de Madrid (UC3M)"
-    short: "Departamento de Ingeniería Aeroespacial<br>Campus de Leganés, Madrid"
-    address: "Campus de Leganés<br>Avda. de la Universidad, 30<br>28911 Leganés, Madrid"
-    note: "Departamento de Ingeniería Aeroespacial"
 
 footer:
   name: "Laboratorio de Dinámica de Fluidos y Aerodinámica basada en datos"
-  line: "INTA · Universidad Carlos III de Madrid · Madrid, España"
+  line: "INTA · Madrid, España"
