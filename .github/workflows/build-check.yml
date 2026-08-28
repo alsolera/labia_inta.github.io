@@ -48,9 +48,9 @@ jobs:
           # Strings that come from _data/en.yml and es.yml through the `t`
           # lookup, so a nil `t` fails these rather than passing silently.
           check _site/index.html "Core research pillars"
-          check _site/index.html "Joint research group"
+          check _site/index.html "Research group · INTA"
           check _site/es/index.html "Líneas de investigación"
-          check _site/es/index.html "Grupo de investigación conjunto"
+          check _site/es/index.html "Grupo de investigación · INTA"
           check _site/contact/index.html "Get in touch"
           check _site/contact/index.html "Marañosa"
 
