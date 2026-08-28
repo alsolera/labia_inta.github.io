@@ -30,6 +30,10 @@ author:
       icon: "fas fa-fw fa-university"
       url: "https://www.uc3m.es"
 
+# Reading Files
+include:
+  - _pages
+
 # Reading & Layout
 words_per_minute: 200
 comments:
